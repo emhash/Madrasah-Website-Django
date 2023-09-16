@@ -1,0 +1,85 @@
+{% extends "base/basic.html" %}
+{% load static %}
+{% block css %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+{% endblock css %}
+{% block content %}
+
+<section id="features">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9 wow fadeInLeft" style="background:#fff">
+          <h3 style="color:#fff; padding:10px; background:#004D40; border-radius:3px; text-align:center">বিসমিল্লাহির রাহমানির রাহীম </h3>
+          <div id="leftcolumn" style="text-align:justify; font-size:15px; color:#000; padding: 10px; background:#F1F8E9;border-radius:3px">
+            <h1 style="color:#000;  text-align:center">বাণী</h1>
+            <br>
+            <table align="center" style="width: 100%;">
+              <tbody>
+                <tr>
+                  <td align="center" style="width: 50%;"><img src="{{admins.photo.url}}" width="80%" style="border: 2px solid #999; padding: 5px; border-radius: 5px;"></td>
+                  <td align="left" style="font-size: 15px; font-weight: bold; text-align: center;">
+                    {{admins.rank_of_top_person}} {{admins.name_of_top_person}}<br>
+                    <i class="fas fa-envelope"></i>Email: {{admins.email}}<br><i class="fas fa-phone"></i>{{admins.mobile}}<br>
+                    {{admins.rank_of_top_person}}<br>
+                    {{madrasa.address}}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <br>
+            <p align="justify" style="font-size:17px; color:#000">
+              {{admins.person_speach}}
+            </p>
+            <br>
+            <table>
+              <tbody>
+                <tr>
+                  <td style="width:66%"></td>
+                  <td style="font-size:20px; font-weight:bold; text-align: center;">{{admins.name_of_top_person}}<br>
+                    {{admins.rank_of_top_person}}<br>
+                    <i class="fas fa-envelope"></i>Email: {{admins.email}}<br><i class="fas fa-phone"></i>{{admins.mobile}}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+          <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-0f6ef0f" data-id="0f6ef0f" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+            <div class="elementor-widget-wrap elementor-element-populated">
+               <div class="elementor-element elementor-element-0e04c70 elementor-icon-list--layout-inline elementor-align-center elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="0e04c70" data-element_type="widget" data-widget_type="icon-list.default">
+                  <div class="elementor-widget-container">
+                     <ul class="elementor-icon-list-items elementor-inline-items">
+                        <li class="elementor-icon-list-item elementor-inline-item">
+                           <span class="elementor-icon-list-icon">
+                           <i aria-hidden="true" class="fas fa-certificate"></i>						</span>
+                           <span class="elementor-icon-list-text">এডমিনের বানী</span>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="elementor-element elementor-element-9dc5c73 elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="9dc5c73" data-element_type="widget" data-widget_type="image-box.default">
+                  <div class="elementor-widget-container">
+                    <div class="elementor-image-box-wrapper">
+                       <figure class="elementor-image-box-img"><a href="{% url "admins" admins.id %}"><img width="200" height="246" src=" {{admins.photo.url}} " class="attachment-full size-full" alt="" loading="lazy" /></a></figure>
+                       <div class="elementor-image-box-content">
+                          <p class="elementor-image-box-description"><a href="{% url "admins" admins.id %}">{{admins.name_of_top_person}}</a></p>
+                          <p class="elementor-image-box-description"> পদবীঃ {{admins.rank_of_top_person}} </p>
+                          <p class="elementor-image-box-description"> ইমেইলঃ {{admins.email}} </p>
+                          <p class="elementor-image-box-description"> মোবাইলঃ {{admins.mobile}} </p>
+                          <p class="elementor-image-box-description">আরও পড়ুন......</p>
+                       </div>
+                    </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+    </div>
+  </section>
+
+
+{% endblock content %}

@@ -1,0 +1,23 @@
+#marquee-cont {
+
+  }
+
+  #marquee-cont marquee {
+    background: #ffb300;
+    margin-top: 10px;
+  }
+  #marquee-news {
+    background: #ffb300;
+    padding: 10px;
+  }
+
+  #ticker-title{
+    border:none;
+    padding:5px 20px;
+    background:#1174A8;
+    color:white;
+  }
+
+  #ticker-title:focus{
+    outline:none;
+  }

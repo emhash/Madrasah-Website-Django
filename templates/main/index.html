@@ -1,0 +1,987 @@
+{% extends "base/basic.html" %}
+{% load static %}
+{% block css %}
+
+{% endblock css %}
+
+{% block content %}
+
+
+<section class="elementor-section elementor-top-section elementor-element elementor-element-0c0c88e elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="0c0c88e" data-element_type="section">
+    <div class="elementor-container elementor-column-gap-default">
+       <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-dea9c45" data-id="dea9c45" data-element_type="column">
+          <div class="elementor-widget-wrap elementor-element-populated">
+             <section class="elementor-section elementor-inner-section elementor-element elementor-element-e79ba6a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e79ba6a" data-element_type="section">
+                <div class="elementor-container elementor-column-gap-default">
+                   <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-51c92da" data-id="51c92da" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                      <div class="elementor-widget-wrap elementor-element-populated">
+                         <div class="elementor-element elementor-element-adcca72 elementor-icon-list--layout-inline elementor-align-center elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="adcca72" data-element_type="widget" data-widget_type="icon-list.default">
+                            <div class="elementor-widget-container">
+                               <ul class="elementor-icon-list-items elementor-inline-items">
+                                  <li class="elementor-icon-list-item elementor-inline-item">
+                                     <span class="elementor-icon-list-icon">
+                                     <i aria-hidden="true" class="fas fa-certificate"></i>						</span>
+                                     <span class="elementor-icon-list-text">প্রধান শিক্ষকের বানী</span>
+                                  </li>
+                               </ul>
+                            </div>
+                         </div>
+                         <div class="elementor-element elementor-element-9b92522 elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="9b92522" data-element_type="widget" data-widget_type="image-box.default">
+                            <div class="elementor-widget-container">
+                               <style>
+                                  .elementor-widget-image-box .elementor-image-box-content{width:100%}@media (min-width:768px){.elementor-widget-image-box.elementor-position-left .elementor-image-box-wrapper,.elementor-widget-image-box.elementor-position-right .elementor-image-box-wrapper{display:-webkit-box;display:-ms-flexbox;display:flex}.elementor-widget-image-box.elementor-position-right .elementor-image-box-wrapper{text-align:right;-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}.elementor-widget-image-box.elementor-position-left .elementor-image-box-wrapper{text-align:left;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}.elementor-widget-image-box.elementor-position-top .elementor-image-box-img{margin:auto}.elementor-widget-image-box.elementor-vertical-align-top .elementor-image-box-wrapper{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.elementor-widget-image-box.elementor-vertical-align-middle .elementor-image-box-wrapper{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.elementor-widget-image-box.elementor-vertical-align-bottom .elementor-image-box-wrapper{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}}@media (max-width:767px){.elementor-widget-image-box .elementor-image-box-img{margin-left:auto!important;margin-right:auto!important;margin-bottom:15px}}.elementor-widget-image-box .elementor-image-box-img{display:inline-block}.elementor-widget-image-box .elementor-image-box-title a{color:inherit}.elementor-widget-image-box .elementor-image-box-wrapper{text-align:center}.elementor-widget-image-box .elementor-image-box-description{margin:0}
+                               </style>
+                               <div class="elementor-image-box-wrapper">
+                                  <figure class="elementor-image-box-img"><a href="{% url "admins" headmaster.id %}"><img width="200" height="246" src=" {{headmaster.photo.url}} " class="attachment-full size-full" alt="" loading="lazy" /></a></figure>
+                                  <div class="elementor-image-box-content">
+                                     <p class="elementor-image-box-description"><a href="{% url "admins" headmaster.id %}">{{headmaster.name_of_top_person}}</a></p>
+                                     <p class="elementor-image-box-description"> পদবীঃ {{headmaster.rank_of_top_person}} </p>
+                                     <p class="elementor-image-box-description"> ইমেইলঃ {{headmaster.email}} </p>
+                                     <p class="elementor-image-box-description"> মোবাইলঃ {{headmaster.mobile}} </p>
+                                     <p class="elementor-image-box-description">আরও পড়ুন......</p>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+
+                   <div class="slider ">
+                     <div class="slide active">
+                        <img src="{% static "images/slider.png" %}" alt="first">
+                     </div>
+
+                     {% for slider in sliders %}
+                     
+                      <div class="slide ">
+                         <img src="{{slider.add_photo.url}}" alt="">
+                      </div>
+
+                     {% endfor %}
+             
+                      <div class="navigation">
+                         <div class="btn active"></div>
+                         {% for _ in sliders %}
+                         <div class="btn"></div>
+                         {% endfor %}
+                         
+                      </div>
+                   </div>
+
+
+                   <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-0f6ef0f" data-id="0f6ef0f" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                      <div class="elementor-widget-wrap elementor-element-populated">
+                         <div class="elementor-element elementor-element-0e04c70 elementor-icon-list--layout-inline elementor-align-center elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="0e04c70" data-element_type="widget" data-widget_type="icon-list.default">
+                            <div class="elementor-widget-container">
+                               <ul class="elementor-icon-list-items elementor-inline-items">
+                                  <li class="elementor-icon-list-item elementor-inline-item">
+                                     <span class="elementor-icon-list-icon">
+                                     <i aria-hidden="true" class="fas fa-certificate"></i></span>
+                                     <span class="elementor-icon-list-text">এডমিনের বানী</span>
+                                  </li>
+                               </ul>
+                            </div>
+                         </div>
+                         <div class="elementor-element elementor-element-9dc5c73 elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="9dc5c73" data-element_type="widget" data-widget_type="image-box.default">
+                            <div class="elementor-widget-container">
+                              <div class="elementor-image-box-wrapper">
+                                 <figure class="elementor-image-box-img"><a href="{% url "admins" admins.id %}"><img width="200" height="246" src=" {{admins.photo.url}} " class="attachment-full size-full" alt="" loading="lazy" /></a></figure>
+                                 <div class="elementor-image-box-content">
+                                    <p class="elementor-image-box-description"><a href="{% url "admins" admins.id %}">{{admins.name_of_top_person}}</a></p>
+                                    <p class="elementor-image-box-description"> পদবীঃ {{admins.rank_of_top_person}} </p>
+                                    <p class="elementor-image-box-description"> ইমেইলঃ {{admins.email}} </p>
+                                    <p class="elementor-image-box-description"> মোবাইলঃ {{admins.mobile}} </p>
+                                    <p class="elementor-image-box-description">আরও পড়ুন......</p>
+                                 </div>
+                              </div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+
+                </div>
+             </section>
+          </div>
+       </div>
+    </div>
+ </section>
+
+ <section class="elementor-section elementor-top-section elementor-element elementor-element-d9e5e84 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="d9e5e84" data-element_type="section">
+    <div class="elementor-container elementor-column-gap-default">
+       <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-505d7c0" data-id="505d7c0" data-element_type="column">
+          <div class="elementor-widget-wrap elementor-element-populated">
+             <section class="elementor-section elementor-inner-section elementor-element elementor-element-3c793c2 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3c793c2" data-element_type="section">
+                <div class="elementor-container elementor-column-gap-default">
+                   <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-a102fcd" data-id="a102fcd" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                      <div class="elementor-widget-wrap elementor-element-populated">
+                         <div class="elementor-element elementor-element-ecbfa8a elementor-icon-list--layout-inline elementor-align-left elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="ecbfa8a" data-element_type="widget" data-widget_type="icon-list.default">
+                            <div class="elementor-widget-container">
+                               <ul class="elementor-icon-list-items elementor-inline-items">
+                                  <li class="elementor-icon-list-item elementor-inline-item">
+                                     <span class="elementor-icon-list-icon">
+                                     <i aria-hidden="true" class="fas fa-certificate"></i>						</span>
+                                     <span class="elementor-icon-list-text">মাদ্রাসা সম্পর্কিত তথ্য</span>
+                                  </li>
+                               </ul>
+                            </div>
+                         </div>
+                         <div class="elementor-element elementor-element-e4e8396 elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="e4e8396" data-element_type="widget" data-widget_type="icon-list.default">
+                            <div class="elementor-widget-container">
+                               <ul class="elementor-icon-list-items">
+                                  <li class="elementor-icon-list-item">
+                                     <a href="{% url "faculty" %}">
+                                     <span class="elementor-icon-list-icon">
+                                     <i aria-hidden="true" class="fas fa-user-shield"></i>						</span>
+                                     <span class="elementor-icon-list-text">কর্মকর্তাবৃন্দ</span>
+                                     </a>
+                                  </li>
+                                  <li class="elementor-icon-list-item">
+                                     <a href="{% url "employee" %}">
+                                     <span class="elementor-icon-list-icon">
+                                     <i aria-hidden="true" class="fas fa-user-tie"></i>						</span>
+                                     <span class="elementor-icon-list-text">৩য় শ্রেণির র্কমচারীবৃন্দ </span>
+                                     </a>
+                                  </li>
+                                  <li class="elementor-icon-list-item">
+                                     <a href="{% url "all_class" %}">
+                                     <span class="elementor-icon-list-icon">
+                                     <i aria-hidden="true" class="fas fa-user-graduate"></i>						</span>
+                                     <span class="elementor-icon-list-text">শ্রেণী</span>
+                                     </a>
+                                  </li>
+                                  <li class="elementor-icon-list-item">
+                                     <a href="{% url "student_info" %}">
+                                     <span class="elementor-icon-list-icon">
+                                     <i aria-hidden="true" class="fas fa-users"></i>						</span>
+                                     <span class="elementor-icon-list-text">শিক্ষার্থীদের তথ্য</span>
+                                     </a>
+                                  </li>
+                                  <li class="elementor-icon-list-item">
+                                     <a href="{% url "syllabus" %}">
+                                     <span class="elementor-icon-list-icon">
+                                     <i aria-hidden="true" class="far fa-list-alt"></i>						</span>
+                                     <span class="elementor-icon-list-text">সিলেবাস</span>
+                                     </a>
+                                  </li>
+                                  <li class="elementor-icon-list-item">
+                                     <a href="{% url "routine" %}">
+                                     <span class="elementor-icon-list-icon">
+                                     <i aria-hidden="true" class="fas fa-bars"></i>						</span>
+                                     <span class="elementor-icon-list-text">রুটিনসমুহ</span>
+                                     </a>
+                                  </li>
+                                  <li class="elementor-icon-list-item">
+                                     <a href="{% url "results" %}">
+                                     <span class="elementor-icon-list-icon">
+                                     <i aria-hidden="true" class="far fa-star"></i>						</span>
+                                     <span class="elementor-icon-list-text">পরীক্ষাসমুহের ফলাফল</span>
+                                     </a>
+                                  </li>
+                               </ul>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                   <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-c098012" data-id="c098012" data-element_type="column">
+                      <div class="elementor-widget-wrap elementor-element-populated">
+                         <div class="elementor-element elementor-element-0b68682 elementor-icon-list--layout-inline elementor-align-center elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="0b68682" data-element_type="widget" data-widget_type="icon-list.default">
+                            <div class="elementor-widget-container">
+                               <ul class="elementor-icon-list-items elementor-inline-items">
+                                  <li class="elementor-icon-list-item elementor-inline-item">
+                                     <span class="elementor-icon-list-icon">
+                                     <i aria-hidden="true" class="fas fa-map-pin"></i>						</span>
+                                     <span class="elementor-icon-list-text">নোটিশ বোর্ড</span>
+                                  </li>
+                               </ul>
+                            </div>
+                         </div>
+                         <div id="marquee-cont">
+                            <table width="100%" cellspacing="0" cellpadding="0">
+                               <tr>
+                                  <td id="marquee">
+                                     <marquee>
+                                       {% for marque in marque %} {{marque}} |{% endfor %}
+                                     </marquee>
+                                  </td>
+                               </tr>
+                            </table>
+                         </div>
+
+                         <div class="elementor-element elementor-element-a5026ea elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="a5026ea" data-element_type="widget" data-widget_type="icon-list.default">
+                            <div class="elementor-widget-container">
+                               <ul class="elementor-icon-list-items">
+                                 {% for notice in notices %}
+                                 
+                                  <li class="elementor-icon-list-item">
+                                     <a href="#">
+                                     <span class="elementor-icon-list-icon">
+                                     <i aria-hidden="true" class="far fa-bell"></i></span>
+                                     <span class="elementor-icon-list-text">{{notice.title_of_notice}}</span>
+                                     </a>
+                                  </li>
+
+                                  {% endfor %}
+                                  
+                                 </ul>
+                                 <div class="elementor-element elementor-element-5380c64 elementor-icon-list--layout-inline elementor-align-center elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="5380c64" data-element_type="widget" data-widget_type="icon-list.default">
+                                    <div class="elementor-widget-container" style="background-color: black;">
+                                       <ul class="elementor-icon-list-items elementor-inline-items">
+                                          <li class="elementor-icon-list-item elementor-inline-item">
+                                             <a href="{% url "notice" %}">
+                                             <span class="elementor-icon-list-icon">
+                                             <i aria-hidden="true" class="fas fa-images"></i></span>
+                                             <span class="elementor-icon-list-text">See all notice</span>
+                                             </a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+
+                   <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-d219965" data-id="d219965" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                      <div class="elementor-widget-wrap elementor-element-populated">
+                         <div class="elementor-element elementor-element-80c09da elementor-icon-list--layout-inline elementor-align-center elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="80c09da" data-element_type="widget" data-widget_type="icon-list.default">
+                            <div class="elementor-widget-container">
+                               <ul class="elementor-icon-list-items elementor-inline-items">
+                                  <li class="elementor-icon-list-item elementor-inline-item">
+                                     <span class="elementor-icon-list-icon">
+                                     <i aria-hidden="true" class="fas fa-graduation-cap"></i>						</span>
+                                     <span class="elementor-icon-list-text">অনলাইন এডমিশন</span>
+                                  </li>
+                               </ul>
+                            </div>
+                         </div>
+                         <div class="elementor-element elementor-element-682a582 elementor-align-justify elementor-widget elementor-widget-button" data-id="682a582" data-element_type="widget" data-widget_type="button.default">
+                            <div class="elementor-widget-container">
+                               <div class="elementor-button-wrapper">
+                                  <a href="https:domain.com" class="elementor-button-link elementor-button elementor-size-lg" role="button">
+                                  <span class="elementor-button-content-wrapper">
+                                  <span class="elementor-button-text">FAZIL ADMISSION</span>
+                                  </span>
+                                  </a>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="elementor-element elementor-element-c986418 elementor-align-justify elementor-widget elementor-widget-button" data-id="c986418" data-element_type="widget" data-widget_type="button.default">
+                            <div class="elementor-widget-container">
+                               <div class="elementor-button-wrapper">
+                                  <a href="https:domain.com" class="elementor-button-link elementor-button elementor-size-lg" role="button">
+                                  <span class="elementor-button-content-wrapper">
+                                  <span class="elementor-button-text">ALIM ADMISSION</span>
+                                  </span>
+                                  </a>
+                               </div>
+                            </div>
+                         </div>
+                         <div class="elementor-element elementor-element-239cf46 elementor-align-justify elementor-widget elementor-widget-button" data-id="239cf46" data-element_type="widget" data-widget_type="button.default">
+                            <div class="elementor-widget-container">
+                               <div class="elementor-button-wrapper">
+                                  <a href="https:domain.com" class="elementor-button-link elementor-button elementor-size-lg" role="button">
+                                  <span class="elementor-button-content-wrapper">
+                                  <span class="elementor-button-text">DAKHIL ADMISSION</span>
+                                  </span>
+                                  </a>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                   
+
+                </div>
+             </section>
+          </div>
+       </div>
+    </div>
+ </section>
+{% comment %} 
+ <section class="elementor-section elementor-top-section elementor-element elementor-element-3ead6dc elementor-section-full_width elementor-section-content-middle elementor-section-height-default elementor-section-height-default" data-id="3ead6dc" data-element_type="section">
+    <div class="elementor-container elementor-column-gap-no">
+       <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4259529" data-id="4259529" data-element_type="column">
+          <div class="elementor-widget-wrap elementor-element-populated">
+             <section class="elementor-section elementor-inner-section elementor-element elementor-element-061d52a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="061d52a" data-element_type="section">
+                <div class="elementor-container elementor-column-gap-default">
+                   <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-0ef9b6a" data-id="0ef9b6a" data-element_type="column">
+                      <div class="elementor-widget-wrap elementor-element-populated">
+                         <div class="elementor-element elementor-element-5380c64 elementor-icon-list--layout-inline elementor-align-center elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="5380c64" data-element_type="widget" data-widget_type="icon-list.default">
+                            <div class="elementor-widget-container">
+                               <ul class="elementor-icon-list-items elementor-inline-items">
+                                  <li class="elementor-icon-list-item elementor-inline-item">
+                                     <a href="https:domain.com">
+                                     <span class="elementor-icon-list-icon">
+                                     <i aria-hidden="true" class="fas fa-images"></i>						</span>
+                                     <span class="elementor-icon-list-text">আমাদের শিক্ষকবৃন্দ</span>
+                                     </a>
+                                  </li>
+                               </ul>
+                            </div>
+                         </div>
+                         <div class="gallery">
+                            <a target="_blank" href="https://www.w3schools.com/css/img_5terre.jpg">
+                            <img src="https://www.w3schools.com/css/img_5terre.jpg" alt="Cinque Terre" width="700" height="400">
+                            </a>
+                            <div class="desc">Add a description of the image here</div>
+                         </div>
+                         <div class="gallery">
+                            <a target="_blank" href="https://www.w3schools.com/css/img_5terre.jpg">
+                            <img src="https://www.w3schools.com/css/img_5terre.jpg" alt="Forest" width="700" height="400">
+                            </a>
+                            <div class="desc">Add a description of the image here</div>
+                         </div>
+                         <div class="gallery">
+                            <a target="_blank" href="https://www.w3schools.com/css/img_5terre.jpg">
+                            <img src="https://www.w3schools.com/css/img_5terre.jpg" alt="Northern Lights" width="700" height="400">
+                            </a>
+                            <div class="desc">Add a description of the image here</div>
+                         </div>
+                         <div class="gallery">
+                            <a target="_blank" href="https://www.w3schools.com/css/img_5terre.jpg">
+                            <img src="https://www.w3schools.com/css/img_5terre.jpg" alt="Mountains" width="700" height="400">
+                            </a>
+                            <div class="desc">Add a description of the image here</div>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </section>
+          </div>
+       </div>
+    </div>
+
+    
+ </section>
+ {% endcomment %}
+{% comment %} 
+ <section id="features">
+   <div class="container myContainer">
+     <div class="row">
+       <div class="col-sm-12 wow fadeInLeft" style="background:#fff">
+         <div style="overflow-x:auto;">
+           <style>
+             .o-container{margin:0 auto; width:100%}@media all and (min-width:480px){.o-container{padding:0 0px}}@media all and (min-width:720px){.o-container{padding:0 0px}}.o-header{margin:0;padding:0}.o-header-nav{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;background-color:#dc446e}.o-header-nav__link{padding:12px;color:#000}.o-header-nav__link:hover{color:#000;background-color:#9d1d41}.o-header__title{margin:24px;padding:0;color:#000;font-size:28px;font-weight:300;text-align:center}@media all and (min-width:480px){.o-header__title{margin:36px;font-size:42px}}.o-section{margin-bottom:24px}.o-section:last-child{margin-bottom:0}@media all and (min-width:720px){.o-section{margin-bottom:48px}}.o-sub-nav{margin:0;padding:0}.o-sub-nav__items{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:row wrap;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;list-style:none;margin:0;padding:0}.o-sub-nav__item{margin:0;padding:4px}.o-sub-nav__link{display:block;margin:0;padding:4px 24px;border:2px solid #dc446e}.o-sub-nav__item.active .o-sub-nav__link,.o-sub-nav__link:hover{color:#000;background-color:#dc446e}.o-footer{padding:12px 0;text-align:center}@media all and (min-width:480px){.o-footer{padding:24px 0}}@media all and (min-width:720px){.o-footer{padding:48px 0}}.c-tabs-nav{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;list-style:none;margin:0;padding:0}.c-tabs-nav__link{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;margin-right:4px;padding:12px 0px 12px 0px;color:#000;background-color:#AED581;text-align:center;-webkit-transition:color .3s;transition:color .3s}.c-tabs-nav__link:last-child{margin-right:0}.c-tabs-nav__link:hover{color:#000}.c-tabs-nav__link.is-active{color:red;background-color:#8BC34A}.c-tabs-nav__link i,.c-tabs-nav__link span{margin:0;padding:0;line-height:1}.c-tabs-nav__link i{font-size:18px}.c-tabs-nav__link span{display:none;font-size:18px}@media all and (min-width:720px){.c-tabs-nav__link i{margin-bottom:12px;font-size:22px}.c-tabs-nav__link span{display:block}}
+             .c-tab{display:none;background-color:#c8e6c9;height:100%; width:100%; padding:10px}
+             .c-tab.is-active{display:block}.c-tab__content{padding:0rem; width:100%}.c-tabs.no-js .c-tabs-nav{display:none}.c-tabs.no-js .c-tab{display:block;margin-bottom:1.5rem}.c-tabs.no-js .c-tab:last-child{margin-bottom:0}.carbon-img,.carbon-wrap{margin:0 0 4px;display:block}#carbonads{position:fixed;bottom:12px;right:12px;z-index:1000;padding:24px 12px 12px;width:154px;background-color:#fff;line-height:1.1;border:1px solid #e7e7e7}.carbon-img{padding:0;width:130px;height:100px}.carbon-text{color:#000;font-size:12px}.carbon-poweredby{font-size:10px}.carbonad__close{display:block;position:absolute;top:0;left:12px;height:24px;font-size:11px;line-height:24px}@media all and (max-width:660px){#carbonads{display:none}}
+             .c-tabs-nav a {font-size:18px; font-weight:bold}
+             .tablecornar tr td:nth-child(1) {width:2%;}
+             .tablecornar tr td:nth-child(2) {width:12%; color:brown !important;}
+             .tablecornar tr td:nth-child(3) {width:2%;}
+             .tablecornar tr td:nth-child(4) {width:82%;}
+             .tablecornar tr td:nth-child(5) {width:2%;}
+             .tablecornar tr td {padding:5px; border-bottom:1px solid #fff; color:#000 !important;}
+             .ndg {width:100%; height:100%; }
+             .ndg:hover {background:#fff; font-weight:bold;}
+           </style>
+           <div style="overflow-x:auto;">
+             <main class="o-main">
+               <div class="o-container">
+                 <div class="o-section">
+                   <div id="tabs" class="c-tabs">
+                     <div class="c-tabs-nav">
+                       <a href="#" class="c-tabs-nav__link is-active"><img src="images/ico1.png"><br>দাখিল কর্ণার</a>
+                       <a href="#" class="c-tabs-nav__link"><img src="images/ico5.png"><br>আলিম কর্ণার</a>
+                       <a href="#" class="c-tabs-nav__link"><img src="images/ico3.png"><br>ফাযিল কর্ণার</a>
+                       <a href="#" class="c-tabs-nav__link"><img src="images/ico6.png"><br>কামিল কর্ণার</a>
+                       <a href="#" class="c-tabs-nav__link"><img src="images/ico2.png"><br>অনার্স কর্ণার</a>
+                       <a href="#" class="c-tabs-nav__link"><img src="images/ico4.png"><br>মাস্টার্স কর্ণার</a>
+                     </div>
+                     <div class="c-tab is-active">
+                       <div class="c-tab__content">
+                         <table width="100%" class="tablecornar">
+                           <tbody>
+                             <tr>
+                               <td><img src="images/days/calendar-12.png" width="30"></td>
+                               <td>September 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694511188"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694511188">আখেরি চাহার সোম্বা উপলক্ষ্যে সকল শ্রেণির ক্লাস স্�</a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694511188"></a></div>
+                                 </div>
+                               </td>
+                               <td><img src="images/new.gif" width="40"></td>
+                             </tr>
+                             <tr>
+                               <td><img src="images/days/calendar-05.png" width="30"></td>
+                               <td>September 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1693907196"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1693907196">জন্মাষ্টমী উপলক্ষ্যে মাদ্রাসা বন্ধের নোটিশ</a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1693907196"></a></div>
+                                 </div>
+                               </td>
+                               <td></td>
+                             </tr>
+                             <tr>
+                               <td><img src="images/days/calendar-22.png" width="30"></td>
+                               <td>August 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1692698762"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1692698762">আলিম পরীক্ষা-২০২৩ চলাকালীন দাখিল স্তর, আলিম ২য় বর্ষ</a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1692698762"></a></div>
+                                 </div>
+                               </td>
+                               <td></td>
+                             </tr>
+                             <tr>
+                               <td><img src="images/days/calendar-14.png" width="30"></td>
+                               <td>August 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1691995913"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1691995913">ক্লাস স্থগিত সংক্রান্ত নোটিশ।</a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1691995913"></a></div>
+                                 </div>
+                               </td>
+                               <td></td>
+                             </tr>
+                             <tr>
+                               <td><img src="images/days/calendar-27.png" width="30"></td>
+                               <td>July 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1690452566"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1690452566">ফাযিল পরীক্ষা চলাকালী ক্লাস রুটিন : দাখিল স্তর ও খত�</a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1690452566"></a></div>
+                                 </div>
+                               </td>
+                               <td></td>
+                             </tr>
+                           </tbody>
+                         </table>
+                         <table style="width:100%;">
+                           <tbody>
+                             <tr></tr>
+                             <tr>
+                               <td style="width:100%; text-align:right;"><a href="index.php?request=notice&amp;pageIDno=1&amp;gid=7">SEE ALL</a></td>
+                             </tr>
+                           </tbody>
+                         </table>
+                       </div>
+                     </div>
+                     <div class="c-tab">
+                       <div class="c-tab__content">
+                         <table width="100%" class="tablecornar">
+                           <tbody>
+                             <tr>
+                               <td><img src="images/days/calendar-12.png" width="30"></td>
+                               <td>September 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694511188"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694511188">আখেরি চাহার সোম্বা উপলক্ষ্যে সকল শ্রেণির ক্লাস স্�</a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694511188"></a></div>
+                                 </div>
+                               </td>
+                               <td><img src="images/new.gif" width="40"></td>
+                             </tr>
+                             <tr>
+                               <td><img src="images/days/calendar-07.png" width="30"></td>
+                               <td>September 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694068519"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694068519">সকল শ্রেণির (ক্লাস) রুটিন-২০২৩ (সংশোধিত)</a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694068519"></a></div>
+                                 </div>
+                               </td>
+                               <td></td>
+                             </tr>
+                             <tr>
+                               <td><img src="images/days/calendar-05.png" width="30"></td>
+                               <td>September 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1693907196"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1693907196">জন্মাষ্টমী উপলক্ষ্যে মাদ্রাসা বন্ধের নোটিশ</a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1693907196"></a></div>
+                                 </div>
+                               </td>
+                               <td></td>
+                             </tr>
+                             <tr>
+                               <td><img src="images/days/calendar-22.png" width="30"></td>
+                               <td>August 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1692698762"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1692698762">আলিম পরীক্ষা-২০২৩ চলাকালীন দাখিল স্তর, আলিম ২য় বর্ষ</a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1692698762"></a></div>
+                                 </div>
+                               </td>
+                               <td></td>
+                             </tr>
+                             <tr>
+                               <td><img src="images/days/calendar-16.png" width="30"></td>
+                               <td>August 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1692172567"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1692172567">ক্লাস সংক্রান্ত নোটিশ : আলিম ২য় বর্ষ ও ফাযিল ২য় ও ৩য় �</a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1692172567"></a></div>
+                                 </div>
+                               </td>
+                               <td></td>
+                             </tr>
+                           </tbody>
+                         </table>
+                         <table style="width:100%;">
+                           <tbody>
+                             <tr></tr>
+                             <tr>
+                               <td style="width:100%; text-align:right;"><a href="index.php?request=notice&amp;pageIDno=1&amp;gid=8">SEE ALL</a></td>
+                             </tr>
+                           </tbody>
+                         </table>
+                       </div>
+                     </div>
+                     <div class="c-tab">
+                       <div class="c-tab__content">
+                         <table width="100%" class="tablecornar">
+                           <tbody>
+                             <tr>
+                               <td><img src="images/days/calendar-12.png" width="30"></td>
+                               <td>September 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694511188"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694511188">আখেরি চাহার সোম্বা উপলক্ষ্যে সকল শ্রেণির ক্লাস স্�</a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694511188"></a></div>
+                                 </div>
+                               </td>
+                               <td><img src="images/new.gif" width="40"></td>
+                             </tr>
+                             <tr>
+                               <td><img src="images/days/calendar-07.png" width="30"></td>
+                               <td>September 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694068519"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694068519">সকল শ্রেণির (ক্লাস) রুটিন-২০২৩ (সংশোধিত)</a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694068519"></a></div>
+                                 </div>
+                               </td>
+                               <td></td>
+                             </tr>
+                             <tr>
+                               <td><img src="images/days/calendar-05.png" width="30"></td>
+                               <td>September 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1693907196"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1693907196">জন্মাষ্টমী উপলক্ষ্যে মাদ্রাসা বন্ধের নোটিশ</a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1693907196"></a></div>
+                                 </div>
+                               </td>
+                               <td></td>
+                             </tr>
+                             <tr>
+                               <td><img src="images/days/calendar-23.png" width="30"></td>
+                               <td>August 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1692773424"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1692773424">আলিম প্রাইভেট ভর্তি-২০২৪ এর ভর্তি-রেজিষ্ট্রেশন চল�</a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1692773424"></a></div>
+                                 </div>
+                               </td>
+                               <td></td>
+                             </tr>
+                             <tr>
+                               <td><img src="images/days/calendar-16.png" width="30"></td>
+                               <td>August 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1692172567"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1692172567">ক্লাস সংক্রান্ত নোটিশ : আলিম ২য় বর্ষ ও ফাযিল ২য় ও ৩য় �</a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1692172567"></a></div>
+                                 </div>
+                               </td>
+                               <td></td>
+                             </tr>
+                           </tbody>
+                         </table>
+                         <table style="width:100%;">
+                           <tbody>
+                             <tr></tr>
+                             <tr>
+                               <td style="width:100%; text-align:right;"><a href="index.php?request=notice&amp;pageIDno=1&amp;gid=9">SEE ALL</a></td>
+                             </tr>
+                           </tbody>
+                         </table>
+                       </div>
+                     </div>
+                     <div class="c-tab">
+                       <div class="c-tab__content">
+                         <table width="100%" class="tablecornar">
+                           <tbody>
+                             <tr>
+                               <td><img src="images/days/calendar-12.png" width="30"></td>
+                               <td>September 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694511188"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694511188">আখেরি চাহার সোম্বা উপলক্ষ্যে সকল শ্রেণির ক্লাস স্�</a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694511188"></a></div>
+                                 </div>
+                               </td>
+                               <td><img src="images/new.gif" width="40"></td>
+                             </tr>
+                             <tr>
+                               <td><img src="images/days/calendar-07.png" width="30"></td>
+                               <td>September 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694068519"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694068519">সকল শ্রেণির (ক্লাস) রুটিন-২০২৩ (সংশোধিত)</a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694068519"></a></div>
+                                 </div>
+                               </td>
+                               <td></td>
+                             </tr>
+                             <tr>
+                               <td><img src="images/days/calendar-05.png" width="30"></td>
+                               <td>September 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1693907196"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1693907196">জন্মাষ্টমী উপলক্ষ্যে মাদ্রাসা বন্ধের নোটিশ</a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1693907196"></a></div>
+                                 </div>
+                               </td>
+                               <td></td>
+                             </tr>
+                             <tr>
+                               <td><img src="images/days/calendar-22.png" width="30"></td>
+                               <td>August 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1692698762"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1692698762">আলিম পরীক্ষা-২০২৩ চলাকালীন দাখিল স্তর, আলিম ২য় বর্ষ</a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1692698762"></a></div>
+                                 </div>
+                               </td>
+                               <td></td>
+                             </tr>
+                             <tr>
+                               <td><img src="images/days/calendar-14.png" width="30"></td>
+                               <td>August 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1691995913"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1691995913">ক্লাস স্থগিত সংক্রান্ত নোটিশ।</a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1691995913"></a></div>
+                                 </div>
+                               </td>
+                               <td></td>
+                             </tr>
+                           </tbody>
+                         </table>
+                         <table style="width:100%;">
+                           <tbody>
+                             <tr></tr>
+                             <tr>
+                               <td style="width:100%; text-align:right;"><a href="index.php?request=notice&amp;pageIDno=1&amp;gid=10">SEE ALL</a></td>
+                             </tr>
+                           </tbody>
+                         </table>
+                       </div>
+                     </div>
+                     <div class="c-tab">
+                       <div class="c-tab__content">
+                         <table width="100%" class="tablecornar">
+                           <tbody>
+                             <tr>
+                               <td><img src="images/days/calendar-12.png" width="30"></td>
+                               <td>September 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694511188"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694511188">আখেরি চাহার সোম্বা উপলক্ষ্যে সকল শ্রেণির ক্লাস স্�</a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694511188"></a></div>
+                                 </div>
+                               </td>
+                               <td><img src="images/new.gif" width="40"></td>
+                             </tr>
+                             <tr>
+                               <td><img src="images/days/calendar-07.png" width="30"></td>
+                               <td>September 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694068519"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694068519">সকল শ্রেণির (ক্লাস) রুটিন-২০২৩ (সংশোধিত)</a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694068519"></a></div>
+                                 </div>
+                               </td>
+                               <td></td>
+                             </tr>
+                             <tr>
+                               <td><img src="images/days/calendar-05.png" width="30"></td>
+                               <td>September 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1693907196"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1693907196">জন্মাষ্টমী উপলক্ষ্যে মাদ্রাসা বন্ধের নোটিশ</a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1693907196"></a></div>
+                                 </div>
+                               </td>
+                               <td></td>
+                             </tr>
+                             <tr>
+                               <td><img src="images/days/calendar-14.png" width="30"></td>
+                               <td>August 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1691995913"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1691995913">ক্লাস স্থগিত সংক্রান্ত নোটিশ।</a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1691995913"></a></div>
+                                 </div>
+                               </td>
+                               <td></td>
+                             </tr>
+                             <tr>
+                               <td><img src="images/days/calendar-10.png" width="30"></td>
+                               <td>July 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1688987907"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1688987907">হলে সিট বরাদ্দপ্রাপ্ত শিক্ষার্থীদের নামের তালিকা </a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1688987907"></a></div>
+                                 </div>
+                               </td>
+                               <td></td>
+                             </tr>
+                           </tbody>
+                         </table>
+                         <table style="width:100%;">
+                           <tbody>
+                             <tr></tr>
+                             <tr>
+                               <td style="width:100%; text-align:right;"><a href="index.php?request=notice&amp;pageIDno=1&amp;gid=11">SEE ALL</a></td>
+                             </tr>
+                           </tbody>
+                         </table>
+                       </div>
+                     </div>
+                     <div class="c-tab">
+                       <div class="c-tab__content">
+                         <table width="100%" class="tablecornar">
+                           <tbody>
+                             <tr>
+                               <td><img src="images/days/calendar-12.png" width="30"></td>
+                               <td>September 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694511188"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694511188">আখেরি চাহার সোম্বা উপলক্ষ্যে সকল শ্রেণির ক্লাস স্�</a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694511188"></a></div>
+                                 </div>
+                               </td>
+                               <td><img src="images/new.gif" width="40"></td>
+                             </tr>
+                             <tr>
+                               <td><img src="images/days/calendar-07.png" width="30"></td>
+                               <td>September 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694068519"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694068519">সকল শ্রেণির (ক্লাস) রুটিন-২০২৩ (সংশোধিত)</a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1694068519"></a></div>
+                                 </div>
+                               </td>
+                               <td></td>
+                             </tr>
+                             <tr>
+                               <td><img src="images/days/calendar-05.png" width="30"></td>
+                               <td>September 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1693907196"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1693907196">জন্মাষ্টমী উপলক্ষ্যে মাদ্রাসা বন্ধের নোটিশ</a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1693907196"></a></div>
+                                 </div>
+                               </td>
+                               <td></td>
+                             </tr>
+                             <tr>
+                               <td><img src="images/days/calendar-14.png" width="30"></td>
+                               <td>August 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1691995913"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1691995913">ক্লাস স্থগিত সংক্রান্ত নোটিশ।</a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1691995913"></a></div>
+                                 </div>
+                               </td>
+                               <td></td>
+                             </tr>
+                             <tr>
+                               <td><img src="images/days/calendar-10.png" width="30"></td>
+                               <td>July 2023</td>
+                               <td><img src="images/ico7.png" width="30"></td>
+                               <td>
+                                 <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1688987907"></a>
+                                 <div class="ndg">
+                                   <a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1688987907">হলে সিট বরাদ্দপ্রাপ্ত শিক্ষার্থীদের নামের তালিকা </a>
+                                   <div><a style="text-decoration:none; color:#004d40; font-size:15px" href="index.php?request=notice&amp;noticeID=1688987907"></a></div>
+                                 </div>
+                               </td>
+                               <td></td>
+                             </tr>
+                           </tbody>
+                         </table>
+                         <table style="width:100%;">
+                           <tbody>
+                             <tr></tr>
+                             <tr>
+                               <td style="width:100%; text-align:right;"><a href="index.php?request=notice&amp;pageIDno=1&amp;gid=12">SEE ALL</a></td>
+                             </tr>
+                           </tbody>
+                         </table>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </main>
+           </div>
+           <script>
+             (function() {
+               'use strict';
+               var tabs = function(options) {
+             
+                 var el = document.querySelector(options.el);
+                 var tabNavigationLinks = el.querySelectorAll(options.tabNavigationLinks);
+                 var tabContentContainers = el.querySelectorAll(options.tabContentContainers);
+                 var activeIndex = 0;
+                 var initCalled = false;
+                 var init = function() {
+                   if (!initCalled) {
+                     initCalled = true;
+                     el.classList.remove('no-js');
+                     
+                     for (var i = 0; i < tabNavigationLinks.length; i++) {
+                       var link = tabNavigationLinks[i];
+                       handleClick(link, i);
+                     }
+                   }
+                 };
+                 var handleClick = function(link, index) {
+                   link.addEventListener('click', function(e) {
+                     e.preventDefault();
+                     goToTab(index);
+                   });
+                 };    
+                 var goToTab = function(index) {
+                   if (index !== activeIndex && index >= 0 && index <= tabNavigationLinks.length) {
+                     tabNavigationLinks[activeIndex].classList.remove('is-active');
+                     tabNavigationLinks[index].classList.add('is-active');
+                     tabContentContainers[activeIndex].classList.remove('is-active');
+                     tabContentContainers[index].classList.add('is-active');
+                     activeIndex = index;
+                   }
+                 };
+                 return {
+                   init: init,
+                   goToTab: goToTab
+                 };
+             
+               };
+               window.tabs = tabs;
+             })();
+           </script>
+           <script>
+             var myTabs = tabs({
+               el: '#tabs',
+               tabNavigationLinks: '.c-tabs-nav__link',
+               tabContentContainers: '.c-tab'
+             });
+             
+             myTabs.init();
+           </script>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+
+  {% endcomment %}
+ <section class="elementor-section elementor-top-section elementor-element elementor-element-3ead6dc elementor-section-full_width elementor-section-content-middle elementor-section-height-default elementor-section-height-default" data-id="3ead6dc" data-element_type="section">
+    <div class="elementor-container elementor-column-gap-no">
+       <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4259529" data-id="4259529" data-element_type="column">
+          <div class="elementor-widget-wrap elementor-element-populated">
+             <section class="elementor-section elementor-inner-section elementor-element elementor-element-061d52a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="061d52a" data-element_type="section">
+                <div class="elementor-container elementor-column-gap-default">
+                   <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-0ef9b6a" data-id="0ef9b6a" data-element_type="column">
+                      <div class="elementor-widget-wrap elementor-element-populated">
+                         <div class="elementor-element elementor-element-5380c64 elementor-icon-list--layout-inline elementor-align-center elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="5380c64" data-element_type="widget" data-widget_type="icon-list.default">
+                            <div class="elementor-widget-container">
+                               <ul class="elementor-icon-list-items elementor-inline-items">
+                                  <li class="elementor-icon-list-item elementor-inline-item">
+                                     <a href="https:domain.com">
+                                     <span class="elementor-icon-list-icon">
+                                     <i aria-hidden="true" class="fas fa-images"></i>						</span>
+                                     <span class="elementor-icon-list-text">গ্যালারী</span>
+                                     </a>
+                                  </li>
+                               </ul>
+                            </div>
+                         </div>
+
+                         {% for pic in pic %}
+                         <div class="gallery">
+                            <a target="_blank" href="{{pic.add_photo.url}}">
+                            <img src="{{pic.add_photo.url}}" alt="picture" width="700" height="400">
+                            </a>
+                            <div class="desc">{{pic.title}} <br>{{pic.description}}</div>
+                            
+                         </div>
+                         {% endfor %}
+                         
+                      </div>
+                   </div>
+                </div>
+             </section>
+          </div>
+       </div>
+    </div>
+ </section>
+ 
+
+
+{% endblock content %}
+
+

@@ -1,0 +1,180 @@
+.artical {width:100%; float:left; margin-bottom:20px; border-radius:5px;}
+.articalhead { width:100%; background:#CFD8DC; float:left; border-radius:5px 5px 0 0; padding:15px; font-size:24px; color:#004D40; font-weight:bold}
+.articaldetails { width:100%; background:#ECEFF1; float:left; padding:15px; border-radius:0 0 5px 5px; text-align:justify; 
+color:#000; font-size: 15px;}
+.articaldetails .imgdiv {text-align:center; margin:20px 0 20px 0; }
+.articaldetails .imgdiv img {border:1px solid #607D8B; padding:2px; border-radius:3px; width: 100%;
+    height: auto;}
+
+.boxhover .boxhoverli :hover { box-shadow: 0 15px 20px #aaa; }
+.headname {color:#F0F4C3}
+.headdesignation {color:#795548}
+.buttondept { padding:4px; background:#607D8B; border-radius:3px; color:#fff}
+.buttondept:hover{background: brown; }
+.headimage {border:1px solid #888; padding:2px;  width:60px; height:75px;}
+.containermypricing{border:1px solid #eee;}
+.homepage{background:#fff}
+.myContainer{background:#fff; border-left: 2px solid #E0F2F1; border-right: 2px solid #E0F2F1}
+.headingg{font-size:16px; font-weight:bold; padding:10px 0 10px 0; display:block}
+ .signUpBG{background:#F5F5DC;}
+.uro-usd-box .uro-usd-head{font-weight:bold; color:#CDDC39; font-size:22px;}
+.uro-usd-box1 .uro-usd-head{font-weight:bold; color:#FF9800; font-size:22px;}
+ .signUpBG1 .inText {height:40px; color:brown; font-weight:bold; font-size:16px}
+ 
+.MyHeadline{border-bottom:2px solid #8BC34A; font-weight:bold}
+.MyHeadline h3{color:#8BC34A; font-size:18px}
+.link-list  li{border-bottom:1px solid #555}
+.clientTable th{font-size:18px;}
+.clientTable td{font-size:17px; color:#000}
+.sectionHeading h3{color:#004D40}   
+.textcolor{color:black; font-size:16px; text-align:justify}    
+.sectionHeading{width:100%; padding-bottom:5px; border-bottom:2px solid red; box-shadow:         
+-webkit-box-shadow: 0 10px 6px -6px #004D40;
+	   -moz-box-shadow: 0 10px 6px -6px #004D40;
+	        box-shadow: 0 10px 6px -6px #004D40;
+			margin-bottom:10px;
+}
+/*Footer-v1
+------------------------------------*/
+.footer-v1 .footer {
+	padding: 40px 0;	
+	background: #333333;
+}
+
+.footer-v1 .footer p {
+	color: #eee;
+}
+
+.footer-v1 .footer h2 {
+	color: #eee;
+	font-size: 18px;
+	font-weight: 200;
+}
+
+/*Link List*/
+.footer-v1 .link-list li {
+	border-top: solid 1px #353535;
+}
+
+.footer-v1 address,
+.footer-v1 .link-list a,
+.footer-v1 .link-list i {
+	color: #eee;
+}
+
+.footer-v1 address {
+	line-height: 23px;
+}
+
+/*Dotted Map*/
+.footer-v1 .footer .map-img {
+	background: url(../../img/map-img.png) 5px 60px no-repeat;
+}
+
+/*Blog Posts (with images)*/
+.footer-v1 .footer .posts .dl-horizontal a {
+ color: #dadada;
+}
+
+.footer-v1 .footer .dl-horizontal a:hover {
+ color: #5fb611 !important;
+}
+
+/*Copyright*/
+.footer-v1 .copyright {
+	background: #222;
+	border-top: none;
+	padding: 10px 0 5px;
+}
+
+.footer-v1 .copyright p {
+	color: #eee;
+	margin-top: 14px;
+}
+
+.footer-v1 .copyright a {
+	margin: 0 2px;
+}
+
+.footer-v1 .footer-socials {
+	margin-top: 12px;
+	text-align: right;
+}
+
+.footer-v1 .footer-socials li a {
+	color: #777;
+	font-size: 16px;
+}
+
+@media (max-width: 991px) {
+	.footer-v1 .copyright,
+	.footer-v1 .footer-socials {
+		text-align: left;
+	}
+}
+.slidertd2{width:50%; text-align:justify;color:#000;font-size:17px; padding:5px; border:1px solid #C5E1A5; background:#F1F8E9}
+.slidertd1{width:50%;  padding:5px; border:1px solid #C5E1A5}
+.slidertd0{width:100%;  padding:5px; border:1px solid #C5E1A5; background:#fff}
+.itemHight{height:443px; padding-top:10px}
+.itemHight h4{color:brown; font-weight:bold}
+.btnPadding{padding:10px;}
+.socialWidth{width:250px; font-size:16px; color:black}
+
+.msgLeft{text-align:center}
+.msgLeft1{text-align:center}
+
+.msgRight1{}
+.msgImage img{border:2px solid #CDDC39; padding:4px; margin-top:10px}
+.borderTop{border:1px solid #C5E1A5}
+.schrolling{font-weight:bold}
+.marginTop{margin-top:-100px;}
+.marginTop1{margin-top:-60px;}
+.admintext{text-align:justify; color:#000; font-size:16px; background:#DCEDC8; padding:4px}
+.tableColor{color:#000}
+.footerBD{background:#004D40}
+
+<style>
+/* liScroll styles */
+
+.tickercontainer { /* the outer div with the black border */
+
+background: #eee; 
+width: 1048px; 
+height: 50px; 
+margin: 0; 
+padding: 0;
+overflow: hidden; 
+
+}
+.tickercontainer .mask { /* that serves as a mask. so you get a sort of padding both left and right */
+position: relative;
+
+width: 1048px;
+overflow: hidden;
+}
+ul.newsticker { /* that's your list */
+position: relative;
+left: 1048px;
+font: bold 10px Verdana;
+list-style-type: none;
+margin: 0;
+padding: 0;
+
+}
+ul.newsticker li {
+float: left; /* important: display inline gives incorrect results when you check for elem's width */
+margin: 0;
+padding: 0;
+background: #eee;
+}
+ul.newsticker a {
+white-space: nowrap;
+padding: 0;
+color: #ff0000;
+font: bold 10px Verdana;
+margin: 0 50px 0 0;
+} 
+ul.newsticker span {
+margin: 0 10px 0 0;
+} 
+.msgBG{box-shadow: 0 4px 8px 0 #DCEDC8, 0 6px 20px 0 #DCEDC8;}

@@ -1,0 +1,51 @@
+{% extends "base/basic.html" %}
+{% load static %}
+{% block content %}
+<div class="col-sm-9 wow fadeInLeft" style="background:#fff">
+  <div style="overflow-x:auto;">
+    <h3 style="color:#fff; padding:10px; background:#263238; border-radius:3px"><img src="{% static "images/facultyimg.png" %}" width="30">  
+      শিক্ষক তালিকা ( ক্রমানুসারে নয় )			
+    </h3>
+    <table class="table" style="width:100%; margin:10px auto 0 auto;">
+    </table>
+    <table class="table table-hover" style="width:100%; margin:auto; background:#F1F8E9">
+      <tbody>
+
+        {% for employee in employees %}
+        
+        
+
+        <tr>
+          <td style="width:40%;"> <b style="font-size:16px; color:#004D40">  {{employee.name}} </b>  <br> 
+            <span style="font-size:15px; color:#607D8B">{{employee.rank}}<br> ৩য় শ্রেণির র্কমচারী</span> 
+          </td>
+          <td style="width:40%;">   <img src="{% static "images/id.png" %}" width="20"> আইডি নং-{{employee.e_id}}<br>
+            <img src="{% static "images/phone.png" %}" width="20"> {{employee.mobile}}<br>  
+          </td>
+          <td style="width:10%;"> <img src="{{employee.photo.url}}" width="70"> </td>
+          <td style="width:10%;"> <a href="#" class="btn btn-primary"> Profile </a>  </td>
+        </tr>
+
+        {% endfor %}
+      </tbody>
+    </table>
+    <style>
+      .pagination{
+      display:inline;
+      padding:8px;
+      background:#eee;
+      margin:2px;
+      font-size:14px;
+      }
+      .pagination:hover{
+      background:#ccc;
+      }
+      .pageNo{
+      margin-top:20px;
+      }
+    </style>
+    <div class="pageNo">		
+    </div>
+  </div>
+</div>
+{% endblock content %}
