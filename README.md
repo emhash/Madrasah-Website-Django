@@ -1,4 +1,4 @@
-<h2 align='center'>Madrasah - "A educational website for a madrasah website."</h2>
+<h2 align='center'>Madrasah - "An educational website for a madrasah website."</h2>
 
 <h3>Features - </h3>
 » DashBoard <br>
